@@ -26,12 +26,6 @@ jobs:
       run: |
         cd frontend
         npm run build
-    
-    # Uncomment and adjust when you add tests
-    # - name: Run tests
-    #   run: |
-    #     cd frontend
-    #     npm test
 
   deploy:
     needs: build-and-test
