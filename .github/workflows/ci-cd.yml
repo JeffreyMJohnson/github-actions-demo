@@ -1,17 +1,17 @@
 name: CI/CD Pipeline
 
 on:
-  push:
+  push: # this triggers the workflow when code is pushed to the repository
     branches: [ main ]
-  pull_request:
+  pull_request: # this triggers the workflow when a pull request is opened or updated
     branches: [ main ]
 
-jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
+jobs: # this is the list of jobs that will be run in the workflow
+  build-and-test: # this is the name of the job
+    runs-on: ubuntu-latest # this specifies the operating system that the job will run on
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4 # this checks out the code in the repository
     
     - name: Use Node.js
       uses: actions/setup-node@v2
