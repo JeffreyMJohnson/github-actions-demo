@@ -1,6 +1,6 @@
 {
   "name": "@jeffreymjohnson/todo-list-control",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A reuseable todo list control",
   "main": "dist/index.js",
   "scripts": {
