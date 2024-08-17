@@ -28,6 +28,9 @@ jobs:
     - name: Authenticate with GitHub Packages
       run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
 
+    - name: List node_modules
+      run: ls -R ./bounty-hunter-todo/npm-package/node_modules
+  
     - name: Build and publish package
       run: npm publish --access public
       working-directory: ./bounty-hunter-todo/npm-package
