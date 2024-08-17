@@ -26,6 +26,7 @@
     "url": "git+https://github.com/your-github-username/github-actions-demo.git"
   },
   "devDependencies": {
-    "babel-loader": "^9.1.3"
+    "babel-loader": "^9.1.3",
+    "webpack-cli": "^5.1.4"
   }
 }
