@@ -25,6 +25,11 @@ jobs:
       run: npm ci
       working-directory: ./bounty-hunter-todo/npm-package
 
+    - name: Bump version
+      run: |
+        npm version patch --no-git-tag-version
+      working-directory: ./bounty-hunter-todo/npm-package
+
     - name: Commit version bump
       run: |
         git config --local user.email "actions@github.com"
