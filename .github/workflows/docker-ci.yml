@@ -27,6 +27,7 @@ jobs:
       run: |
         pwd
         docker build --build-arg GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -t ghcr.io/jeffreymjohnson/github-actions-demo:latest .
+      working-directory: ./bounty-hunter-todo/frontend
   
     - name: Push Docker image
       run: docker push ghcr.io/${{ github.repository }}:latest
