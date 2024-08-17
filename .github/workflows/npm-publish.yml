@@ -1,0 +1,33 @@
+name: NPM Publish Pipeline
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'bounty-hunter-todo/npm-package/**'
+      - '.github/workflows/npm-publish.yml'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Install dependencies
+      run: npm ci
+      working-directory: ./bounty-hunter-todo/npm-package
+
+    - name: Authenticate with GitHub Packages
+      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+
+    - name: Build and publish package
+      run: npm publish --access public
+      working-directory: ./bounty-hunter-todo/npm-package
