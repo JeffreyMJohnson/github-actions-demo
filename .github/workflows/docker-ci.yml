@@ -30,4 +30,5 @@ jobs:
       working-directory: ./bounty-hunter-todo/frontend
   
     - name: Push Docker image
-      run: docker push ghcr.io/${{ github.repository }}:latest
+      run: docker push ghcr.io/jeffreymjohnson/github-actions-demo:latest
+      working-directory: ./bounty-hunter-todo/frontend
