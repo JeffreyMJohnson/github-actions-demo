@@ -10,7 +10,7 @@ const TodoList = ({ initialTodos = [] }) => {
     };
 
     return (
-        foo<ul>
+        <ul>
             {todos.map((todo, index) => (
                 <li key={index}>
                     <input

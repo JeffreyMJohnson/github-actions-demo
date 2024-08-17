@@ -1,5 +1,3 @@
-Certainly. Here's a comprehensive review of the Bounty Hunter To-Do List project, focusing on its value as a demonstration for implementing CI/CD with GitHub Actions:
-
 Project Overview:
 The Bounty Hunter To-Do List is a demonstration project showcasing how to set up a modern web application with a custom npm package and implement a CI/CD pipeline using GitHub Actions. This project serves as an educational tool for developers looking to understand and implement similar workflows in their own projects.
 
@@ -69,3 +67,21 @@ How to Use This Project as a Learning Tool:
 
 Conclusion:
 This project serves as an excellent, practical demonstration of implementing a CI/CD pipeline using GitHub Actions. It covers crucial aspects of modern web development workflows, from custom package creation to automated deployment. By studying and adapting this project, developers can gain valuable insights into streamlining their development processes and implementing robust CI/CD practices in their own work.
+
+### Running in Docker Containers
+
+This project is now configured to run within Docker containers for both deployment and development environments. 
+Docker allows for consistent and isolated environments, making it easier to manage dependencies and configurations.
+
+#### Docker Setup Overview:
+1. **Frontend Application**: The React frontend will be containerized using a Dockerfile located in the `frontend/` directory.
+2. **Custom NPM Package**: The npm package will be built and published within a Docker container using a Dockerfile located in the `npm-package/` directory.
+
+#### Benefits of Dockerizing:
+- **Consistency**: Ensures that the application runs the same way on any machine, avoiding the "works on my machine" problem.
+- **Isolation**: Isolates dependencies and configurations, reducing the risk of conflicts.
+- **Ease of Deployment**: Simplifies the deployment process by packaging the application and its dependencies into a single container.
+
+#### Next Steps:
+- Build and run the Docker containers locally to test the setup.
+- Integrate Docker into the CI/CD pipeline for automated builds and deployments.

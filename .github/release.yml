@@ -1,0 +1,8 @@
+changelog:
+  categories:
+    - title: "🚀 New Features"
+      labels:
+        - "feat"
+    - title: "🐛 Bug Fixes"
+      labels:
+        - "fix"
