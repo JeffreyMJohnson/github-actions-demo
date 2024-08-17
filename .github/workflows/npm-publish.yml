@@ -26,7 +26,7 @@ jobs:
       working-directory: ./bounty-hunter-todo/npm-package
 
     - name: Authenticate with GitHub Packages
-      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.GITHUB_TOKEN }}" > ~/.npmrc
+      run: echo "//npm.pkg.github.com/:_authToken=${{ secrets.PAT_TOKEN }}" > ~/.npmrc
   
     - name: Build and publish package
       run: npm publish --access public
