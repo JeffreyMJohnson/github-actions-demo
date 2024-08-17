@@ -27,7 +27,7 @@ jobs:
 
     - name: Build Docker image
       run: |
-        echo ${pwd}
+        pwd
         docker build --build-arg GITHUB_TOKEN=${{ secrets.GITHUB_TOKEN }} -t ghcr.io/jeffreymjohnson/github-actions-demo:latest .
   
     - name: Push Docker image
